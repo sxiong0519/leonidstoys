@@ -40,24 +40,48 @@ toys.push(drums)
 
 toys.push(basketball)
 
-console.log(toys)
+// console.log(toys)
 
-for (const toy of toys) {
-    console.log(`${toy.maker}'s ${toy.name} is ${toy.price} dollars.`)
+// for (const toy of toys) {
+//     console.log(`${toy.maker}'s ${toy.name} is ${toy.price} dollars.`)
+// }
+
+// for(const toy of toys){
+//     toy.price=toy.price + 3
+// }
+
+// for (const toy of toys) {
+//     console.log(`${toy.maker}'s ${toy.name} is now ${toy.price} dollars.`)
+// }
+
+// const findToy = 2
+// for (const toy of toys) {
+//     if (toy.id === findToy) {
+//         toy.price = toy.price + 3,
+//         console.log(`${toy.maker}'s ${toy.name} is now ${toy.price} dollars.`)
+//     }
+// }
+
+const addNewItem = toyObject => {
+    const lastIndex = toys.length - 1
+    const currentLastToy = toys[lastIndex]
+    const maxId = currentLastToy.id
+    const idNewItem = maxId + 1
+
+toyObject.id = idNewItem
+toys.push(toyObject)
 }
 
-for(const toy of toys){
-    toy.price=toy.price + 3
+const jumpropes = {
+    name: "jumprope",
+    price: 4,
+    maker: "Spalding"
 }
+
+addNewItem(jumpropes)
 
 for (const toy of toys) {
     console.log(`${toy.maker}'s ${toy.name} is now ${toy.price} dollars.`)
 }
 
-const findToy = 2
-for (const toy of toys) {
-    if (toy.id === findToy) {
-        toy.price = toy.price + 3,
-        console.log(`${toy.maker}'s ${toy.name} is now ${toy.price} dollars.`)
-    }
-}
+console.log(toys)
