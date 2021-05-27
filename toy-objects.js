@@ -45,3 +45,11 @@ console.log(toys)
 for (const toy of toys) {
     console.log(`${toy.maker}'s ${toy.name} is ${toy.price} dollars.`)
 }
+
+for(const toy of toys){
+    toy.price=toy.price + 3
+}
+
+for (const toy of toys) {
+    console.log(`${toy.maker}'s ${toy.name} is now ${toy.price} dollars.`)
+}
