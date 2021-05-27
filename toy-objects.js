@@ -41,3 +41,7 @@ toys.push(drums)
 toys.push(basketball)
 
 console.log(toys)
+
+for (const toy of toys) {
+    console.log(`${toy.maker}'s ${toy.name} is ${toy.price} dollars.`)
+}
