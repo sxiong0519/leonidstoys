@@ -21,5 +21,23 @@ const toys = [
 }
 ]
 
-console.log(toys)
 
+const drums = {
+    id: 4,
+    name: "drums",
+    price: 20,
+    maker: "Fisher Price"
+}
+
+const basketball = {
+    id: 5,
+    name: "basketball",
+    price: 12,
+    maker: "Spalding"
+}
+
+toys.push(drums)
+
+toys.push(basketball)
+
+console.log(toys)
