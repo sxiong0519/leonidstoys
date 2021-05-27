@@ -53,3 +53,11 @@ for(const toy of toys){
 for (const toy of toys) {
     console.log(`${toy.maker}'s ${toy.name} is now ${toy.price} dollars.`)
 }
+
+const findToy = 2
+for (const toy of toys) {
+    if (toy.id === findToy) {
+        toy.price = toy.price + 3,
+        console.log(`${toy.maker}'s ${toy.name} is now ${toy.price} dollars.`)
+    }
+}
